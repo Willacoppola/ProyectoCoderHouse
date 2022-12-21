@@ -1,0 +1,693 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li a {text-decoration: none;}
+
+
+@font-face {
+    font-family:Montserrat-Bold;
+    src: url(../fonts/static/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family:Montserrat-Regular;
+    src: url(../fonts/static/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family:Montserrat-Light;
+    src: url(../fonts/static/Montserrat-Light.ttf);
+}
+
+
+/* empieza nav */
+
+
+
+.nav{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    top: 0;
+    font-family:Montserrat-Bold ;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    position: sticky;
+}
+
+.firmaWeb {
+    display: block;
+    position: absolute;
+    justify-content:left;
+    align-self: flex-start;
+    height: 70px;
+    margin-top: 15px;
+    margin-left: 10px;
+
+}
+
+.nav > .fa-bars{
+    display: none;
+}
+
+.nav > ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+.nav > ul > li {
+    display: inline-block;
+}
+
+.nav > ul > li > a {
+    display: block;
+    padding: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.nav > ul > li > ul {
+    display: none;
+    list-style-type: none;
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.nav > ul > li:hover ul {
+    display: block;
+}
+
+.nav > ul > li > ul a{
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.nav > ul > li > ul > li {
+    font-style: normal;
+    font-size: 18px;
+    font-family:Montserrat-Bold;
+    top:0;
+}
+
+.logos {
+    display: flex;
+    width: 200px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+
+
+main{
+    margin-top: 0px;
+}
+
+
+@media(max-width:576px){
+
+    .nav > .fa-bars{
+        display: block;
+        color: black;
+        font-size: 50px;
+        padding: 25px;
+    }
+
+    .nav > ul {
+       position: fixed;
+       flex-direction: column;
+       background-color: white;
+       width: 150px;
+       height: 100vh;
+       justify-content: start;
+       padding-top: 80px;
+       align-items: center;
+       left: -500px;
+       transition: 0.2s;
+    }
+
+    .nav > .fa-bars:hover + ul {
+        left: 0;
+    }
+
+    .nav > ul:hover {
+        left: 0;
+    }
+
+    .firmaWeb {
+      position: static;
+      padding: 8px;
+      display: block;
+      margin-left: 50px;
+    }
+}
+
+
+/* termina nav */
+
+/* empieza inicio */
+
+.imagenPpalInicio{
+    width: 100%;
+    min-height: min-content;
+}
+.TituloIntro {
+    margin: 50px;
+    font-style:normal;
+    font-size: 40px;
+    font-family:Montserrat-Bold;
+    text-align:start;
+    padding-left: 20px;
+}
+
+.ParrafoIntro {
+    width: 65%;
+    margin: 50px;
+    font-style: normal;
+    font-size: 15px;
+    font-family:Montserrat-Regular;
+    text-align: start; 
+    padding-left: 20px;
+}
+
+
+/* termina inicio */
+
+/* empieza servicios */
+
+.imagenPpalServicios{
+    width: 100%
+}
+
+.serviciosTodos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.servicios{
+    width: 350px;
+    height: 700px;
+    padding: 15px;
+    border: dashed 2px;
+    margin: 10px;
+    text-align: center;
+}
+
+.servicios__img{
+    width: 100%;
+}
+
+.servicios__titulo{
+    font-family:Montserrat-Bold ;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.servicios__parrafo{
+    font-family:Montserrat-Light ;
+    font-size: 20px;
+    padding: 20px;
+    padding-bottom: 20px;
+}
+
+.servicios__btn{
+    display: block;
+    width: 150px;
+    margin: 10px;
+    font-family:Montserrat-Bold ;
+    font-size:20px ;
+    border-radius: 15%;
+    cursor: pointer;
+    box-shadow: inset;
+    padding: 15px;
+    background-color: #D0D3D9;
+    color: #686C73;
+    border: none;
+    text-decoration: none;
+
+}
+
+/* termina servicios */
+
+/* empieza portfolio */
+
+.gridPadre{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 1200px 700px 250px;
+    grid-template-areas: "header       header        header      header      header"
+                          "renderJury   renderJury    renderJury  planoJury   planoJury"
+                          "esquemasJury esquemasJury  textoJury   textoJury   textoJury";
+    gap: 15px;
+}
+
+.header {
+    grid-area: header;
+    background-image: url(../img/Portfolio.jpg);
+    width: 100%;
+}
+
+.header__titulo{
+    font-family:Montserrat-Bold ;
+    font-size: 90px;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    padding-top: 400px;
+}
+
+.renderJury {
+    grid-area: renderJury;
+    background-image: url(../img/renderJury2.jpg);
+    background-size: cover;
+
+}
+
+.planoJury{
+    grid-area: planoJury;
+    background-image: url(../img/planoJury.jpg);
+    background-size: cover;
+    
+}
+
+.esquemasJury{
+    grid-area: esquemasJury;
+    background-image: url(../img/esquemas.jpg);
+    background-size: cover;
+}
+
+
+.textoJury{
+    grid-area: textoJury;
+    background-image: url(../img/hormigonTextura.jpg);
+    width: 800px;
+    height: 250px;
+    
+}
+
+.textoJury__titulo {
+    font-family:Montserrat-Bold ;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.textoJury__parrafo{
+    font-family:Montserrat-Regular ;
+    font-size: 20px;
+    font-weight: 20px;
+    color: white;
+    padding: 15px;
+    text-align: right;
+}
+
+@media(max-width:576px){
+    .gridPadre{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 500px 160px 130px 130px;
+        grid-template-areas: "header          header"
+                              "renderJury     planoJury"
+                              "esquemasJury   planoJury"
+                              "textoJury      textoJury";
+        gap: 2px;
+    }
+
+    .header {
+        grid-area: header;
+        background-image: url(../img/Portfolio.jpg);
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .header__titulo{
+        font-family:Montserrat-Bold ;
+        font-size: 40px;
+        text-align: center;
+        padding: 20px;
+        color: white;
+        padding-top: 200px;
+    }
+
+    .renderJury {
+        grid-area: renderJury;
+        background-image: url(../img/renderJury2.jpg);
+        background-size: 50vw;
+        background-repeat: no-repeat;
+    }
+
+    .planoJury{
+        grid-area: planoJury;
+        background-image: url(../img/planoJury.jpg);
+        background-size: 50vw;
+        background-repeat: no-repeat;
+    }
+
+    .esquemasJury{
+        grid-area: esquemasJury;
+        background-image: url(../img/esquemas.jpg);
+        background-size: 50vw;
+        background-repeat: no-repeat;
+
+    }
+
+    .textoJury{
+        grid-area: textoJury;
+        background-image: url(../img/hormigonTextura.jpg);
+        width: 70vw;
+        height: 120px;
+        margin-left: 165px;
+        
+    }
+    
+    .textoJury__titulo {
+        font-family:Montserrat-Bold ;
+        font-size: 15px;
+        text-align: center;
+        padding: 5px;
+        color: white;
+    }
+    
+    .textoJury__parrafo{
+        font-family:Montserrat-Regular ;
+        font-size: 12px;
+        color: white;
+        padding: 10px;
+        text-align: end;
+    }
+    
+
+}
+
+/* termina portfolio */
+
+/* empieza contacto */
+
+
+.mainContacto{
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+}
+
+.googlemaps{
+    padding: 30px;
+}
+.mapa{
+    font-family: Montserrat-Regular;
+    font-size: 10px;
+}
+
+.fa-location-pin {
+    display: block;
+    color: black;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.formulario{
+    width: 100%;
+    font-family: Montserrat-Regular;
+    padding: 30px;
+    background-image: url(../img/hormigonTextura.jpg);
+    width: 780px;
+    height: 400px;
+    margin-top: 25px;
+    margin-right: 15px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 60px 50px 50px 80px 60px;
+    grid-template-areas: "titulo           titulo"
+                         "nombreYapellido  email"
+                         "asunto           asunto"
+                         "mensaje          mensaje"
+                         "btn              btn";
+}
+
+.formulario h2:nth-child(1){
+    grid-area: titulo;
+    color: white;
+}
+
+.formulario label:nth-child(2){
+    grid-area: nombreYapellido ;
+}
+
+.formulario label:nth-child(3){
+    grid-area: email;
+}
+
+.formulario label:nth-child(4){
+    grid-area: asunto;
+}
+
+.formulario label:nth-child(5){
+    grid-area: mensaje;
+}
+
+.formulario button:nth-child(6){
+    grid-area: btn;
+    background-color: transparent;
+    border: 0;
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 10px;
+    margin-top: 20px;
+    font-family: Montserrat-Bold;
+    color: white;
+    border: dashed 1px;
+}
+
+.formulario label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+}
+
+.formulario label input , .formulario label textarea{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid;
+    outline: none;
+    font-family:Montserrat-Light ;
+}
+
+.formulario label input{
+    color: white;
+    font-family:Montserrat-Light;
+}
+
+.formulario label textarea {
+    height: 80px;
+    color: white;
+    font-family:Montserrat-Light;
+}
+
+
+@media(max-width:576px){
+    .mainContacto{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    flex-wrap: wrap;
+}
+    .googlemaps{
+    width: 570px;
+}
+
+    .formulario{
+    width: 520px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    }
+
+}
+
+/* termina contacto */
+
+/* empieza proyecto */
+
+/*
+.nombresObras{
+    font-family:Montserrat-Bold ;
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    justify-content: center;
+
+}
+
+*/
+.proyectosGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 650px 1000px 1000px;
+    grid-template-areas: "echeverria  peron"
+                         "deLaTecnica elSalvador"
+                         "extra1      extra2";
+    width: 100%;
+    justify-content: space-between;
+}
+
+.echeverria {
+    grid-area: echeverria;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.peron{
+    grid-area: peron;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+}
+
+.deLaTecnica{
+    grid-area: deLaTecnica;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.elSalvador{
+    grid-area: elSalvador;
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+}
+
+.extra1{
+    grid-area: extra1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.extra2{
+    grid-area: extra2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+}
+
+.echeverria:hover{
+    transform: scale(.8);
+    transition: 2s;
+}
+
+.peron:hover{
+    transform: scale(.8);
+    transition: 2s;
+}
+
+.deLaTecnica:hover{
+    transform: scale(.8);
+    transition: 2s;
+}
+
+.elSalvador:hover{
+    transform: scale(.8);
+    transition: 2s;
+}
+
+.extra1:hover{
+    transform: scale(.8);
+    transition: 2s;
+}
+
+.extra2:hover{
+    transform: scale(.8);
+    transition: 2s;
+}
+
+
+
+@media(max-width:576px){
+    .proyectosGrid{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+/* empieza footer */
+
+.footer{
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin-bottom: 20px;
+    align-items: center;
+    
+}
+
+.social{
+    justify-content: end;
+    text-align: right;
+}
+
+h4{
+    margin:50px ;
+    font-style: normal;
+    font-size: 17px;
+    font-family:Montserrat-Bold;
+}
+
+h5{
+    margin: 50px;
+    font-style: normal;
+    font-size:13px ;
+    font-family:Montserrat-Light ;
+}
+/* termina footer */
+
+@media(max-width:576px){
+    .footer{
+        width: 100%;
+        height: 70px;
+        margin-bottom: 5px;
+    }
+
+    .social{
+        text-align: right;
+    }
+
+    h4{
+        margin: 10px ;
+        font-size: 10px;
+        font-family:Montserrat-Bold;
+        
+    }
+    
+    h5{
+        margin: 10px;
+        font-size:8px ;
+        font-family:Montserrat-Light ;
+    }
+}
