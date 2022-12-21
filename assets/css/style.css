@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -535,7 +536,7 @@ main{
 .proyectosGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 650px 1000px 1000px;
+    grid-template-rows: 650px 1000px 1300px;
     grid-template-areas: "echeverria  peron"
                          "deLaTecnica elSalvador"
                          "extra1      extra2";
