@@ -25,7 +25,7 @@ li a {text-decoration: none;}
 /* ------------------------------------- empieza nav de CSS ------------------------------------- */
 
 
-.nav {
+.navCSS {
     width: 100% ;
     height: 100px;
     background-color: white;
@@ -48,22 +48,22 @@ li a {text-decoration: none;}
 
 }
 
-.nav > .fa-bars{
+.navCSS > .fa-bars{
     display: none;
 }
 
-.nav > ul {
+.navCSS > ul {
     list-style-type: none;
     display: flex;
     justify-content: end;
     width: 100%;
 }
 
-.nav > ul > li {
+.navCSS > ul > li {
     display: inline-block;
 }
 
-.nav > ul > li > a {
+.navCSS > ul > li > a {
     display: block;
     padding: 15px;
     font-size: 20px;
@@ -71,7 +71,7 @@ li a {text-decoration: none;}
     margin-top: 20px;
 }
 
-.nav > ul > li > ul {
+.navCSS > ul > li > ul {
     display: none;
     list-style-type: none;
     background-color: white;
@@ -81,17 +81,17 @@ li a {text-decoration: none;}
     cursor: pointer;
 }
 
-.nav > ul > li:hover ul {
+.navCSS > ul > li:hover ul {
     display: block;
 }
 
-.nav > ul > li > ul a{
+.navCSS > ul > li > ul a{
     text-decoration: none;
     display: block;
     padding: 10px;
 }
 
-.nav > ul > li > ul > li {
+.navCSS > ul > li > ul > li {
     font-style: normal;
     font-size: 18px;
     font-family:Montserrat-Bold;
@@ -116,14 +116,14 @@ main{
 
 @media(max-width:576px){
 
-    .nav > .fa-bars{
+    .navCSS > .fa-bars{
         display: block;
         color: black;
         font-size: 50px;
         padding: 25px;
     }
 
-    .nav > ul {
+    .navCSS > ul {
        position: fixed;
        flex-direction: column;
        background-color: white;
@@ -136,11 +136,11 @@ main{
        transition: 0.2s;
     }
 
-    .nav > .fa-bars:hover + ul {
+    .navCSS > .fa-bars:hover + ul {
         left: 0;
     }
 
-    .nav > ul:hover {
+    .navCSS > ul:hover {
         left: 0;
     }
 
@@ -212,7 +212,43 @@ main{
     top:0;
 }
 
+@media(max-width:576px){
 
+    .navbar > .fa-bars{
+        display: block;
+        color: black;
+        font-size: 50px;
+        padding: 25px;
+    }
+
+    .navbar-nav {
+       position: fixed;
+       flex-direction: column;
+       background-color: white;
+       width: 150px;
+       height: 100vh;
+       justify-content: start;
+       padding-top: 80px;
+       align-items: center;
+       left: -500px;
+       transition: 0.2s;
+    }
+
+    .navbar > .fa-bars:hover + ul {
+        left: 0;
+    }
+
+    .navbar > ul:hover {
+        left: 0;
+    }
+
+    .firmaWeb {
+      position: static;
+      padding: 8px;
+      display: block;
+      margin-left: 50px;
+    }
+}
 
 
 /* ------------------------------------- termina nav de bootstrap -------------------------------------*/
