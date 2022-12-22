@@ -192,6 +192,7 @@ main{
     padding: 10px;
     width: 200px;
     cursor: pointer;
+    border: 0;
 }
 
 .nav-item:hover .dropdown-menu {
