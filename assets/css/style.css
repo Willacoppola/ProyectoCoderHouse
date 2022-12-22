@@ -599,7 +599,6 @@ main{
 }
 
 */
-/*
 .proyectosGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -701,7 +700,7 @@ main{
     }
 }
 
-*/
+
 .mb-5:hover{
  transition: 2s;
  transform: scale(.8);
