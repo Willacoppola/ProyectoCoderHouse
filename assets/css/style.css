@@ -213,13 +213,8 @@ main{
     top:0;
 }
 
-@media(max-width:576px){
-
-    .navbar {
-        flex-direction: column;
-
-    }
-
+.firmaWebBS{
+    width: 250px;
 }
 
 
