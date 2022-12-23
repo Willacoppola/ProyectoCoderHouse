@@ -194,9 +194,9 @@ main{
 .dropdown-menu {
     display: block;
     list-style-type: none;
-    background-color: rgb(130, 30, 30);
+    background-color: rgb(255, 255, 255);
     text-align: start;
-    margin: 10px;
+    margin-top: 30px;
     padding: 10px;
     width: 200px;
     cursor: pointer;
@@ -207,7 +207,11 @@ main{
 @media(max-width:576px){
     .dropdown-menu{
        text-align: end;
-       
+       margin-left: -170px;
+       margin-top: -50px;
+       padding: 5px;
+       width: 150px;
+       height: 210px;
     }
 
 }
@@ -227,6 +231,7 @@ main{
     font-size: 18px;
     font-family:Montserrat-Bold;
     top:0;
+    margin-right: -15px;
 }
 
 .firmaWebBS{
@@ -266,6 +271,13 @@ main{
 
 .carousel-item{
     height: 70vh;
+}
+
+@media(max-width:576px){
+    .carousel-item{
+        height: 250px;
+    }
+    
 }
 
 
