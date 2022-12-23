@@ -170,6 +170,7 @@ main{
     display: flex;
     justify-content: end;
     width: 100%;
+    align-items: flex-end;
 }
 
 .nav-item {
@@ -193,13 +194,22 @@ main{
 .dropdown-menu {
     display: block;
     list-style-type: none;
-    background-color: rgb(144, 45, 45);
-    text-align: end;
+    background-color: rgb(130, 30, 30);
+    text-align: start;
     margin: 10px;
     padding: 10px;
     width: 200px;
     cursor: pointer;
     border-radius: 0;
+    border: none;
+}
+
+@media(max-width:576px){
+    .dropdown-menu{
+       text-align: end;
+       
+    }
+
 }
 
 .nav-item:hover .dropdown-menu {
@@ -443,7 +453,7 @@ main{
 
     .textoJury{
         grid-area: textoJury;
-        background-image: url(../img/hormigonTextura.jpg);
+        background-image: url(../img/hormigonTextura2.jpeg);
         width: 70vw;
         height: 120px;
         margin-left: 165px;
@@ -499,7 +509,7 @@ main{
     width: 100%;
     font-family: Montserrat-Regular;
     padding: 30px;
-    background-image: url(../img/hormigonTextura.jpg);
+    background-image: url(../img/hormigonTextura2.jpeg);
     width: 780px;
     height: 400px;
     margin-top: 25px;
