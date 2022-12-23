@@ -215,40 +215,11 @@ main{
 
 @media(max-width:576px){
 
-    .navbar > .fa-bars{
-        display: block;
-        color: black;
-        font-size: 50px;
-        padding: 25px;
+    .navbar {
+        flex-direction: column;
+
     }
 
-    .navbar-nav {
-       position: fixed;
-       flex-direction: column;
-       background-color: white;
-       width: 150px;
-       height: 100vh;
-       justify-content: start;
-       padding-top: 80px;
-       align-items: center;
-       left: -500px;
-       transition: 0.2s;
-    }
-
-    .navbar > .fa-bars:hover + ul {
-        left: 0;
-    }
-
-    .navbar > ul:hover {
-        left: 0;
-    }
-
-    .firmaWeb {
-      position: static;
-      padding: 8px;
-      display: block;
-      margin-left: 50px;
-    }
 }
 
 
